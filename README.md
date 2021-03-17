@@ -2,4 +2,4 @@
 
 Code for my bachelor thesis on #SmartContracts.
 
-Using Tweepy and Twitter API.
+Using Tweepy, Twitter API and Stanza.
