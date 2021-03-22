@@ -36,3 +36,7 @@ tweets_mood = eval(tweets_mood)
 df_tweets_mood = pd.DataFrame(tweets_mood)
 df_tweets_mood['counter'] = counter
 df_tweets_mood.to_excel('tweets_mood.xlsx')
+
+numbers = [tweet[1] for tweet in tweets_mood]
+numbers = list(itertools.chain(*numbers))
+collections.Counter(numbers)
