@@ -29,3 +29,10 @@ for r in results:
 with codecs.open('sentiment_counter.txt', 'a', 'utf-8') as file:
     file.write(str(counter))
     
+with codecs.open('sentiment.txt', 'r', 'utf-8') as file:
+    tweets_mood = file.read()
+
+tweets_mood = eval(tweets_mood)
+df_tweets_mood = pd.DataFrame(tweets_mood)
+df_tweets_mood['counter'] = counter
+df_tweets_mood.to_excel('tweets_mood.xlsx')
