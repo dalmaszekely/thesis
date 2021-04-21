@@ -1,4 +1,9 @@
+import pandas as pd
 import nltk
+import collections
+
+tweets_df = pd.read_excel('tweetek_retweetekNélkül_0207-0304.xlsx')
+tweets = tweets_df['text']
 
 def create_bigrams(tweets):
 
